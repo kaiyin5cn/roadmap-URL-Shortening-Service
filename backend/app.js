@@ -15,14 +15,9 @@ app.use((req, res, next) => {
 })
 app.use(express.json());
 
-// Home page 
-app.get('/', (req, res) => {
-    res.send("Hi");
-})
-
 // routes
 const urlRoute = require('./routes/url.route');
-app.use('/shorten', urlRoute);
+app.use('/', urlRoute);
 
 // Connect to MongoDB
 mongoose.connect(mongoDBURI)

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const {getUrls, getUrl, createUrl} = require('../controllers/url.controller');
+const {getHomePage, getUrl, createUrl} = require('../controllers/url.controller');
 
-router.get('/', getUrls);
+router.get("/", getHomePage);
 
 router.get("/:shortCode", getUrl);
 
